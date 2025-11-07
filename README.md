@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# Panel Pracownika - Harry Burger
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplikacja panelu pracownika dla restauracji Harry Burger. System zarządzania zamówieniami, magazynem i kontrolą dnia pracy.
 
-## Available Scripts
+## 🚀 Funkcjonalności
 
-In the project directory, you can run:
+- **Dashboard** - Przegląd dziennych statystyk i podsumowań
+- **Zamówienia** - Zarządzanie aktywnymi zamówieniami i przegląd historii
+- **Nowe zamówienie** - Tworzenie i konfiguracja zamówień (burgery, napoje, dodatki)
+- **Magazyn** - Zarządzanie stanem magazynowym produktów
+- **Kontrola dnia** - Zarządzanie sesją dnia pracy
+- **Ustawienia dnia** - Konfiguracja parametrów dnia
+- **Zużycie własne** - Rejestracja zużycia produktów przez pracowników
 
-### `npm start`
+## 🛠️ Technologie
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React** 18.3.1
+- **Firebase** (Firestore, Hosting)
+- **React Router** - nawigacja
+- **Tailwind CSS** - stylowanie
+- **Framer Motion** - animacje
+- **React Hot Toast** - powiadomienia
+- **jsPDF** - generowanie PDF
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📋 Wymagania
 
-### `npm test`
+- Node.js (wersja 14 lub wyższa)
+- npm lub yarn
+- Konto Firebase z projektem
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔧 Instalacja
 
-### `npm run build`
+1. Sklonuj repozytorium:
+```bash
+git clone https://github.com/sosnv/panel-pracownika.git
+cd panel-pracownika
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Zainstaluj zależności:
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Skonfiguruj Firebase:
+   - Utwórz plik `src/firebaseClientConfig.js` z konfiguracją Firebase
+   - Skonfiguruj `firebase.json` i `.firebaserc` dla swojego projektu
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Uruchomienie
 
-### `npm run eject`
+### Tryb deweloperski:
+```bash
+npm start
+```
+Aplikacja będzie dostępna pod adresem [http://localhost:3000](http://localhost:3000)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Build produkcyjny:
+```bash
+npm run build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Wdrożenie na Firebase:
+```bash
+firebase deploy
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📁 Struktura projektu
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+├── components/          # Komponenty React
+│   ├── Sidebar.js
+│   ├── WarehouseSnapshotModal.js
+│   └── WarehouseStockTile.js
+├── contexts/           # Context API
+│   ├── DaySessionContext.js
+│   └── UserContext.js
+├── data/              # Dane produktów
+│   ├── burgers.js
+│   ├── drinks.js
+│   ├── extras.js
+│   ├── ufo-burgers.js
+│   └── warehouseProducts.js
+├── pages/             # Strony aplikacji
+│   ├── Dashboard.js
+│   ├── Orders.js
+│   ├── History.js
+│   ├── NewOrder.js
+│   ├── Warehouse.js
+│   ├── DayControlDashboard.js
+│   ├── DaySettings.js
+│   └── EmployeeConsumption.js
+├── firebase.js
+├── firebaseClientConfig.js
+└── App.js
+```
 
-## Learn More
+## 🔐 Konfiguracja Firebase
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Aplikacja wymaga skonfigurowania Firebase:
+- Firestore Database
+- Firebase Hosting
+- Authentication (opcjonalnie)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📝 Skrypty dostępne
 
-### Code Splitting
+- `npm start` - Uruchamia aplikację w trybie deweloperskim
+- `npm run build` - Buduje aplikację do produkcji
+- `npm test` - Uruchamia testy
+- `firebase deploy` - Wdraża aplikację na Firebase Hosting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🌐 Wdrożenie
 
-### Analyzing the Bundle Size
+Aplikacja jest wdrożona na Firebase Hosting:
+**https://restauracjapracownik.web.app**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📄 Licencja
 
-### Making a Progressive Web App
+Projekt prywatny - Harry Burger
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 👤 Autor
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+sosnv
